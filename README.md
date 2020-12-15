@@ -1,4 +1,4 @@
-# Reliable Queue [![Build Status](https://travis-ci.org/altmetric/reliable-queue-rb.svg?branch=master)](https://travis-ci.org/altmetric/reliable-queue-rb)
+# Reliable Queue [![Build Status](https://api.travis-ci.com/altmetric/reliable-queue-rb.svg?branch=main)](https://travis-ci.com/github/altmetric/reliable-queue-rb)
 
 Ruby reliable queue implementation on top of Redis. It makes sure that message is not lost between popping it from Redis queue and compeleting the task.
 

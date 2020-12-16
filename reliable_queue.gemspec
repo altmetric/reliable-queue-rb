@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'reliable-queue-rb'
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
   s.authors     = ['Anna Klimas','Jonathan Hernandez']
   s.email       = ['support@altmetric.com']
 

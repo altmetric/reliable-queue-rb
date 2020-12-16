@@ -1,5 +1,5 @@
-require 'chunked_reliable_queue'
-require "redis"
+require 'reliable_queue_rb/chunked_reliable_queue'
+require 'redis'
 
 RSpec.describe ChunkedReliableQueue do
   let(:redis) { Redis.new }

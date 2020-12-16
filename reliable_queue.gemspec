@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.email       = ['support@altmetric.com']
 
   s.summary     = "Ruby library for reliable queue processing."
-  s.homepage      = 'https://github.com/altmetric/reliable-queue-rb'
+  s.homepage    = 'https://github.com/altmetric/reliable-queue-rb'
   s.license     = "MIT"
 
   s.files = Dir['*.{md,txt}', 'lib/**/*.rb']

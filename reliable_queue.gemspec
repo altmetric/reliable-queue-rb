@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
   s.name        = 'reliable-queue-rb'
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
   s.authors     = ['Anna Klimas','Jonathan Hernandez']
   s.email       = ['support@altmetric.com']
 
   s.summary     = "Ruby library for reliable queue processing."
-  s.homepage      = 'https://github.com/altmetric/reliable-queue-rb'
+  s.homepage    = 'https://github.com/altmetric/reliable-queue-rb'
   s.license     = "MIT"
 
   s.files = Dir['*.{md,txt}', 'lib/**/*.rb']

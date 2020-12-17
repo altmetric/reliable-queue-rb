@@ -1,5 +1,5 @@
-require 'reliable_queue'
-require "redis"
+require 'reliable_queue_rb/reliable_queue'
+require 'redis'
 
 RSpec.describe ReliableQueue do
   let(:redis) { Redis.new }

@@ -7,7 +7,7 @@ Ruby reliable queue implementation on top of Redis. It makes sure that message i
 Add this line to your application's `Gemfile`:
 
 ```ruby
-gem 'reliable-queue-rb', '~> 0.2.0'
+gem 'reliable-queue-rb', '~> 0.3.0'
 ```
 
 And then execute:

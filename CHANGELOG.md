@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.3.0] - 2021-09-09
+### Changed
+- Upgrade redis
+
 ## [0.2.0] - 2020-12-16
 ### Changed
 - A single require for both classes

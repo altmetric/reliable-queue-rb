@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'reliable-queue-rb'
-  s.version     = '0.2.0'
+  s.version     = '0.3.0'
   s.authors     = ['Anna Klimas','Jonathan Hernandez']
   s.email       = ['support@altmetric.com']
 
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.files = Dir['*.{md,txt}', 'lib/**/*.rb']
   s.test_files = Dir['spec/**/*.rb']
 
-  s.add_dependency 'redis', '~> 3.3'
+  s.add_dependency 'redis', '>= 3.0.0', '< 5.0.0'
   s.add_development_dependency('rake', '~> 10.0')
   s.add_development_dependency('rspec', '~> 3.10')
 end

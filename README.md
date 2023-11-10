@@ -12,14 +12,20 @@ gem 'reliable-queue-rb', '~> 0.3.0'
 
 And then execute:
 
-    $ bundle
+```sh
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install reliable-queue-rb
+```sh
+gem install reliable-queue-rb
+```
 
 ## Usage
+
 Reliable Queue
+
 ```ruby
 queue = ReliableQueue.new(redis_queue, redis_client)
 
@@ -29,6 +35,7 @@ end
 ```
 
 ChunkedReliableQueue
+
 ```ruby
 queue = ChunkedReliableQueue.new(working_on_queue_suffix, redis_queue, redis_client)
 
@@ -39,7 +46,7 @@ end
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/altmetric/reliable-queue-rb.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/altmetric/reliable-queue-rb>.
 
 ## License
 

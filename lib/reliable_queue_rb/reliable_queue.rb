@@ -15,7 +15,7 @@ class ReliableQueue
     return enum_for(:each) unless block_given?
 
     loop do
-      reply = redis.brpoplpush(queue, working_queue, 30)
+      reply = redis.brpoplpush(queue, working_queue, timeout: 30)
       next unless reply
 
       yield reply

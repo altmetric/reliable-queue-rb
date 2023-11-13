@@ -16,7 +16,7 @@ class ChunkedReliableQueue
     return enum_for(:each_slice, size) unless block_given?
 
     loop do
-      blocking_reply = redis.brpoplpush(queue, working_queue, 30)
+      blocking_reply = redis.brpoplpush(queue, working_queue, timeout: 30)
       next unless blocking_reply
 
       replies = [blocking_reply]

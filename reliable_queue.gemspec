@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['spec/**/*.rb']
 
   s.add_dependency 'redis', '>= 5.0.0'
-  s.add_development_dependency('rake', '~> 10.0')
-  s.add_development_dependency('rspec', '~> 3.10')
+  s.add_development_dependency('rake')
+  s.add_development_dependency('rspec')
+  s.add_development_dependency('house_style')
 end

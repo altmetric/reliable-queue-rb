@@ -2,7 +2,7 @@ require 'reliable_queue_rb/reliable_queue'
 require 'redis'
 
 RSpec.describe ReliableQueue do
-  let(:redis) { Redis.new }
+  let(:redis) { Redis.new(host: ENV['REDIS_HOST'] || '127.0.0.1', port: ENV['REDIS_PORT'] || 6379) }
 
   after do
     redis.del('foo')

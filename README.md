@@ -50,6 +50,6 @@ Bug reports and pull requests are welcome on GitHub at <https://github.com/altme
 
 ## License
 
-Copyright © 2020-2021 Altmetric LLP
+Copyright © 2020-2024 Altmetric LLP
 
 Distributed under the [MIT License](http://opensource.org/licenses/MIT).

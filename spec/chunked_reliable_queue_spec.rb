@@ -2,7 +2,7 @@ require 'reliable_queue_rb/chunked_reliable_queue'
 require 'redis'
 
 RSpec.describe ChunkedReliableQueue do
-  let(:redis) { Redis.new }
+  let(:redis) { Redis.new(host: ENV['REDIS_HOST'] || '127.0.0.1', port: ENV['REDIS_PORT'] || 6379) }
 
   after do
     redis.flushall

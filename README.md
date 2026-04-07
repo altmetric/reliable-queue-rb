@@ -2,6 +2,10 @@
 
 Ruby reliable queue implementation on top of Redis. It makes sure that message is not lost between popping it from Redis queue and compeleting the task.
 
+## Requirements
+
+- Redis 6.2 or later
+
 ## Installation
 
 Add this line to your application's `Gemfile`:

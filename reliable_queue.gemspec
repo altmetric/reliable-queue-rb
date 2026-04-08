@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.7.0'
   s.name        = 'reliable-queue-rb'
-  s.version     = '0.4.0'
+  s.version     = '1.0.0'
   s.authors     = ['Anna Klimas', 'Jonathan Hernandez']
   s.email       = ['support@altmetric.com']
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ReliableQueue
   include Enumerable
 
@@ -15,17 +17,17 @@ class ReliableQueue
     return enum_for(:each) unless block_given?
 
     loop do
-      reply = redis.brpoplpush(queue, working_queue, timeout: 30)
+      reply = redis.blmove(queue, working_queue, 'RIGHT', 'LEFT', timeout: 30)
       next unless reply
 
       yield reply
-      redis.lrem(working_queue, 0, reply)
+      redis.lrem(working_queue, 1, reply)
     end
   end
 
   private
 
   def requeue_unfinished_work
-    loop while redis.rpoplpush(working_queue, queue)
+    loop while redis.lmove(working_queue, queue, 'RIGHT', 'LEFT')
   end
 end

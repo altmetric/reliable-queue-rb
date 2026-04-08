@@ -3,10 +3,11 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning](http://semver.org/).
 
-## UNRELEASED - 2024-10-18
+## [1.0.0] - 2026-03-27
 
 ### Changed
 
+- Replace deprecated `rpoplpush`/`brpoplpush` with `lmove`/`blmove` (requires Redis 6.2+)
 - Modernise dev dependencies
 - Replace Travis CI with GitHub Actions
 - Add house_style and apply the corrections

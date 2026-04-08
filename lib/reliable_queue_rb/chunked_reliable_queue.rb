@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class ChunkedReliableQueue
   DEFAULT_SIZE = 100
 
-  attr_reader :name, :queue, :size, :working_queue, :redis
+  attr_reader :name, :queue, :working_queue, :redis
 
   def initialize(name, queue, redis)
     @name = name
@@ -16,20 +18,20 @@ class ChunkedReliableQueue
     return enum_for(:each_slice, size) unless block_given?
 
     loop do
-      blocking_reply = redis.brpoplpush(queue, working_queue, timeout: 30)
+      blocking_reply = redis.blmove(queue, working_queue, 'RIGHT', 'LEFT', timeout: 30)
       next unless blocking_reply
 
       replies = [blocking_reply]
       replies += redis.multi { |multi|
         (size - 1).times do
-          multi.rpoplpush(queue, working_queue)
+          multi.lmove(queue, working_queue, 'RIGHT', 'LEFT')
         end
       }.compact
 
       yield replies
       redis.multi do |multi|
         replies.each do |reply|
-          multi.lrem(working_queue, 0, reply)
+          multi.lrem(working_queue, 1, reply)
         end
       end
     end
@@ -38,6 +40,6 @@ class ChunkedReliableQueue
   private
 
   def requeue_unfinished_work
-    loop while redis.rpoplpush(working_queue, queue)
+    loop while redis.lmove(working_queue, queue, 'RIGHT', 'LEFT')
   end
 end

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.1] - 2026-04-08
+
+### Fixed
+
+- Rename `lib/reliable_queue_rb.rb` back to `lib/reliable-queue-rb.rb` so Bundler can auto-require the gem correctly
+
 ## [1.0.0] - 2026-03-27
 
 ### Changed

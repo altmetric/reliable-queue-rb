@@ -1,2 +1,6 @@
 inherit_gem:
   house_style: ruby/rubocop.yml
+
+Naming/FileName:
+  Exclude:
+    - lib/reliable-queue-rb.rb
